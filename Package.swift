@@ -10,7 +10,20 @@ let package = Package(
     products: [
         .library(name: "VoxeetUXKit", targets: ["VoxeetUXKit"])
     ],
-    targets: [
+    dependencies: [
+      .package(
+        name: "VoxeetSDK",
+        url: "https://github.com/voxeet/voxeet-sdk-ios.git",
+        from: "3.3.3"
+      ),
+      .package(
+        name: "Kingfisher",
+        url: "https://github.com/onevcat/Kingfisher.git",
+        from: "7.1.0"
+      )
+    ],
+    targets:
+        [
         .target(
             name: "VoxeetUXKit",
             path: "VoxeetUXKit",
