@@ -7,6 +7,7 @@
 //
 
 import VoxeetSDK
+import UIKit
 
 @objc public protocol VTUXActionBarViewControllerDelegate {
     func muteAction()

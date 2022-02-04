@@ -6,6 +6,8 @@
 //  Copyright © 2019 Voxeet. All rights reserved.
 //
 
+import UIKit
+
 class UIRoundImageView: UIImageView {
     override func layoutSubviews() {
         super.layoutSubviews()

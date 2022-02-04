@@ -7,6 +7,7 @@
 //
 
 import VoxeetSDK
+import UIKit
 
 @objc public class VTUXConferenceController: NSObject {
     private var viewController: ConferenceViewController?

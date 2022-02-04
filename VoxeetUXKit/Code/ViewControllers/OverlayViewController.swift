@@ -6,6 +6,8 @@
 //  Copyright © 2019 Voxeet. All rights reserved.
 //
 
+import UIKit
+
 class OverlayViewController: UIViewController {
     private let minimizeSize = CGSize(width: 98, height: 130)
     private let minimizeMargin: CGFloat = 10

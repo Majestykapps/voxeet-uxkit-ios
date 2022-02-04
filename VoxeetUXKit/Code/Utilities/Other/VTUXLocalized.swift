@@ -6,6 +6,7 @@
 //  Copyright © 2019 Voxeet. All rights reserved.
 //
 
+import UIKit
 class VTUXLocalized {
     static func string(_ key: String) -> String {
         let strLocalBundle = NSLocalizedString(key, bundle: Bundle(for: VTUXLocalized.self), comment: "")

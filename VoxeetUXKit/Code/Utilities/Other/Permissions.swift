@@ -7,6 +7,7 @@
 //
 
 import AVFoundation
+import UIKit
 
 class Permissions {
     @discardableResult class func microphone(viewController: UIViewController) -> Bool {

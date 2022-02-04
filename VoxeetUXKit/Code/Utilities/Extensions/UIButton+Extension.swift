@@ -6,6 +6,8 @@
 //  Copyright © 2019 Voxeet. All rights reserved.
 //
 
+import UIKit
+
 extension UIButton {
     func isEnabled(_ isEnabled: Bool, animated: Bool) {
         UIView.transition(with: self,

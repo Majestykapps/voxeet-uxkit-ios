@@ -6,6 +6,8 @@
 //  Copyright © 2019 Voxeet. All rights reserved.
 //
 
+import UIKit
+
 @objcMembers public class VTUXSpeakerConfiguration: NSObject {
     public var speakingColor = UIColor.clear
     
