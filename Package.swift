@@ -31,11 +31,12 @@ let package = Package(
                 Target.Dependency.byName(name: "Kingfisher")
             ],
             path: "VoxeetUXKit",
-            exclude: ["Other/Info.plist"],
+            exclude: ["Info.plist"],
             resources: [
-                .process("Other/Info.plist"),
-                .process("Assets/Images"),
-                .process("Assets/Sounds")
+                .process("Info.plist"),
+                .process("Resources/Images"),
+                .process("Resources/Sounds"),
+                .process("Resources/Views")
             ])
     ]
 )
