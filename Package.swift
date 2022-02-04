@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "VoxeetUXKit",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v11)
     ],
@@ -10,7 +11,14 @@ let package = Package(
         .library(name: "VoxeetUXKit", targets: ["VoxeetUXKit"])
     ],
     targets: [
-        .target(name: "VoxeetUXKit", dependencies: []),
-        .testTarget(name: "VoxeetUXKitTests", dependencies: ["VoxeetUXKit"])
+        .target(
+            name: "VoxeetUXKit",
+            path: "VoxeetUXKit",
+            exclude: ["Other/Info.plist"],
+            resources: [
+                .process("Other/Info.plist"),
+                .process("Assets/Images"),
+                .process("Assets/Sounds")
+            ])
     ]
 )
