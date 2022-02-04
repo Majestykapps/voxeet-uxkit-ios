@@ -26,6 +26,10 @@ let package = Package(
         [
         .target(
             name: "VoxeetUXKit",
+            dependencies: [
+                Target.Dependency.byName(name: "VoxeetSDK"),
+                Target.Dependency.byName(name: "Kingfisher")
+            ],
             path: "VoxeetUXKit",
             exclude: ["Other/Info.plist"],
             resources: [
