@@ -5,7 +5,7 @@ let package = Package(
     name: "VoxeetUXKit",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v12)
     ],
     products: [
         .library(name: "VoxeetUXKit", targets: ["VoxeetUXKit"])
