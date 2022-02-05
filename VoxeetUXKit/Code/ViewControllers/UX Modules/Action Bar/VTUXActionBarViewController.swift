@@ -151,7 +151,7 @@ import UIKit
     }
     
     private func toggle(button: UIButton, state: ButtonState, defaultImageName: String, customImage: UIImage?) {
-        let defaultImage = UIImage(named: defaultImageName + (state == .off ? "off.png" : "on.png"), in: Bundle.module, compatibleWith: nil)
+        let defaultImage = UIImage(named: defaultImageName + (state == .off ? "_off.png" : "_on.png"), in: Bundle.module, compatibleWith: nil)
         
         button.tag = state.rawValue
         button.setImage(customImage ?? defaultImage, for: .normal)
