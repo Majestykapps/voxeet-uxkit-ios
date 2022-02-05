@@ -105,7 +105,7 @@ extension ConferenceViewController: VTConferenceDelegate {
         if activeParticipants().isEmpty {
             // Update conference state label.
             if conferenceStateLabel.text == nil {
-                conferenceStateLabel.text = VTUXLocalized.string("VTUX_CONFERENCE_STATE_CALLING")
+                conferenceStateLabel.text = "We're waiting for other callers to arrive."
             }
             conferenceStateLabel.isHidden = false
             

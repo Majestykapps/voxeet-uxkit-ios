@@ -68,7 +68,7 @@ extension VTUXConferenceController {
         if participant.status == .decline || participant.status == .left {
             // Update conference state label.
             if participant.status == .decline {
-                self.viewController?.conferenceStateLabel.text = VTUXLocalized.string("VTUX_CONFERENCE_STATE_DECLINED")
+                self.viewController?.conferenceStateLabel.text = "Declined call."
             }
             
             // Leave current conference.

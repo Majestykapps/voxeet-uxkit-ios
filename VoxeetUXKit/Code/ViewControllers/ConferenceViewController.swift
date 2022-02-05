@@ -208,7 +208,7 @@ class ConferenceViewController: OverlayViewController {
         switch status {
         case .creating:
             // Update conference state label.
-            conferenceStateLabel.text = VTUXLocalized.string("VTUX_CONFERENCE_STATE_CALLING")
+            conferenceStateLabel.text = "We're waiting for other callers to arrive."
             conferenceStateLabel.alpha = 0
             conferenceStateLabel.isHidden = false
             UIView.animate(withDuration: 0.15) {
@@ -216,7 +216,7 @@ class ConferenceViewController: OverlayViewController {
             }
         case .joined:
             // Update conference state label.
-            conferenceStateLabel.text = VTUXLocalized.string("VTUX_CONFERENCE_STATE_CALLING")
+            conferenceStateLabel.text = "We're waiting for other callers to arrive."
             
             // Enable conference buttons.
             actionBarVC.buttons(enabled: true)
@@ -235,7 +235,7 @@ class ConferenceViewController: OverlayViewController {
             
             // Update conference state label.
             if conferenceStateLabel.text == nil {
-                conferenceStateLabel.text = VTUXLocalized.string("VTUX_CONFERENCE_STATE_ENDED")
+                conferenceStateLabel.text = "Call has ended."
             }
             conferenceStateLabel.isHidden = false
             
