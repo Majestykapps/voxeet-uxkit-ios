@@ -12,7 +12,7 @@ import UIKit
     public var displayMute = true
     public var displayCamera = true
     public var displaySpeaker = true
-    public var displayScreenShare = false
+    public var displayScreenShare = true
     public var displayLeave = true
     
     public var overrideMuteOn: UIImage?

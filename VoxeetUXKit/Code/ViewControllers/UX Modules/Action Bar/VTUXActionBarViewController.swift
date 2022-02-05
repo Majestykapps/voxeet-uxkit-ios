@@ -42,7 +42,6 @@ import UIKit
             speakerButton.isHidden = !actionBarConfig.displaySpeaker
             screenShareButton.isHidden = !actionBarConfig.displayScreenShare
             leaveButton.isHidden = !actionBarConfig.displayLeave
-            leaveButton.setImage(actionBarConfig.overrideLeave ?? UIImage(named: "icon_leave.png", in: Bundle.module, compatibleWith: nil), for: .normal)
         }
         muteButton(state: .off)
         cameraButton(state: .off)
@@ -101,7 +100,7 @@ import UIKit
             customImage = state == .off ? actionBarConfig.overrideMuteOff : actionBarConfig.overrideMuteOn
         }
         
-        toggle(button: muteButton, state: state, defaultImageName: "Mute", customImage: customImage)
+        toggle(button: muteButton, state: state, defaultImageName: "icon_mute", customImage: customImage)
     }
     
     public func cameraButton(state: ButtonState) {
@@ -110,7 +109,7 @@ import UIKit
             customImage = state == .off ? actionBarConfig.overrideCameraOff : actionBarConfig.overrideCameraOn
         }
         
-        toggle(button: cameraButton, state: state, defaultImageName: "Camera", customImage: customImage)
+        toggle(button: cameraButton, state: state, defaultImageName: "icon_camera", customImage: customImage)
     }
     
     public func speakerButton(state: ButtonState) {
@@ -119,7 +118,7 @@ import UIKit
             customImage = state == .off ? actionBarConfig.overrideSpeakerOff : actionBarConfig.overrideSpeakerOn
         }
         
-        toggle(button: speakerButton, state: state, defaultImageName: "Speaker", customImage: customImage)
+        toggle(button: speakerButton, state: state, defaultImageName: "icon_speaker", customImage: customImage)
     }
     
     func speakerButtonHeadphonesState() {
