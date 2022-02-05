@@ -67,12 +67,14 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="metal" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flip" translatesAutoresizingMaskIntoConstraints="NO" id="8eR-7d-qYr">
-                                        <rect key="frame" x="59" y="606" width="20" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.triangle.2.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8eR-7d-qYr">
+                                        <rect key="frame" x="59" y="607" width="20" height="18.666666666666686"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="WI4-cE-CTK"/>
                                             <constraint firstAttribute="height" constant="20" id="bJl-VJ-Dxe"/>
                                         </constraints>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-PV-7pZ">
                                         <rect key="frame" x="0.0" y="46" width="375" height="80"/>
@@ -112,13 +114,15 @@
                                             <constraint firstItem="x5u-BH-YcB" firstAttribute="centerX" secondItem="tqV-bw-3TT" secondAttribute="centerX" id="dSp-Kg-b4t"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-Oc-h56">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqb-Oc-h56">
                                         <rect key="frame" x="0.0" y="46" width="60" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Y7y-4g-cbB"/>
                                             <constraint firstAttribute="width" constant="60" id="YT6-Di-WPK"/>
                                         </constraints>
-                                        <state key="normal" image="Minimize">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="arrow.down.forward.square" catalog="system">
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -397,7 +401,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3C0-Wb-8Kp" secondAttribute="height" multiplier="1:1" id="AVW-PA-hXo"/>
                                         </constraints>
-                                        <state key="normal" image="MuteOff"/>
+                                        <state key="normal" image="icon_mute_off.png"/>
                                         <connections>
                                             <action selector="muteAction:" destination="Q3B-h3-n53" eventType="touchUpInside" id="gaH-5R-8C1"/>
                                         </connections>
@@ -407,7 +411,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="OaC-bX-LVD" secondAttribute="height" multiplier="1:1" id="qOy-0e-FI8"/>
                                         </constraints>
-                                        <state key="normal" image="CameraOff"/>
+                                        <state key="normal" image="icon_camera_off.png"/>
                                         <connections>
                                             <action selector="cameraAction:" destination="Q3B-h3-n53" eventType="touchUpInside" id="top-8f-Dx6"/>
                                         </connections>
@@ -417,7 +421,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0p0-Ga-Fvj" secondAttribute="height" multiplier="1:1" id="x16-rL-oSt"/>
                                         </constraints>
-                                        <state key="normal" image="SpeakerOff"/>
+                                        <state key="normal" image="icon_speaker_off.png"/>
                                         <connections>
                                             <action selector="switchDeviceSpeakerAction:" destination="Q3B-h3-n53" eventType="touchUpInside" id="Taa-xR-Tb1"/>
                                         </connections>
@@ -427,7 +431,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tPC-GK-JjB" secondAttribute="height" multiplier="1:1" id="icn-fF-R8M"/>
                                         </constraints>
-                                        <state key="normal" image="ScreenShareOff"/>
+                                        <state key="normal" image="icon_screenshare_off.png"/>
                                         <connections>
                                             <action selector="screenShareAction:" destination="Q3B-h3-n53" eventType="touchUpInside" id="wYT-Vc-EPw"/>
                                         </connections>
@@ -437,7 +441,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yZ3-uY-PO4" secondAttribute="height" multiplier="1:1" id="BQp-QU-94p"/>
                                         </constraints>
-                                        <state key="normal" image="Leave"/>
+                                        <state key="normal" image="icon_leave.png"/>
                                         <connections>
                                             <action selector="leaveAction:" destination="Q3B-h3-n53" eventType="touchUpInside" id="n3w-zD-mEF"/>
                                         </connections>
@@ -528,13 +532,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraOff" width="60" height="60"/>
-        <image name="Flip" width="27" height="31"/>
-        <image name="Leave" width="60" height="60"/>
         <image name="LiveIndicator" width="16" height="16"/>
-        <image name="Minimize" width="50" height="50"/>
-        <image name="MuteOff" width="60" height="60"/>
-        <image name="ScreenShareOff" width="60" height="60"/>
-        <image name="SpeakerOff" width="60" height="60"/>
+        <image name="arrow.down.forward.square" catalog="system" width="128" height="114"/>
+        <image name="arrow.triangle.2.circlepath" catalog="system" width="128" height="101"/>
+        <image name="icon_camera_off.png" width="180" height="180"/>
+        <image name="icon_leave.png" width="180" height="180"/>
+        <image name="icon_mute_off.png" width="180" height="180"/>
+        <image name="icon_screenshare_off.png" width="180" height="180"/>
+        <image name="icon_speaker_off.png" width="180" height="180"/>
     </resources>
 </document>

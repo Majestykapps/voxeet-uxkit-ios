@@ -42,7 +42,7 @@ import UIKit
             speakerButton.isHidden = !actionBarConfig.displaySpeaker
             screenShareButton.isHidden = !actionBarConfig.displayScreenShare
             leaveButton.isHidden = !actionBarConfig.displayLeave
-            leaveButton.setImage(actionBarConfig.overrideLeave ?? UIImage(named: "Leave", in: Bundle(for: type(of: self)), compatibleWith: nil), for: .normal)
+            leaveButton.setImage(actionBarConfig.overrideLeave ?? UIImage(named: "icon_leave.png", in: Bundle.module, compatibleWith: nil), for: .normal)
         }
         muteButton(state: .off)
         cameraButton(state: .off)
@@ -125,7 +125,7 @@ import UIKit
     func speakerButtonHeadphonesState() {
         if let actionBarConfig = VoxeetUXKit.shared.conferenceController?.configuration.actionBar,
            actionBarConfig.overrideSpeakerOff == nil && actionBarConfig.overrideSpeakerOn == nil {
-            let image = UIImage(named: "SpeakerOnHeadphones", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            let image = UIImage(named: "icon_speaker_on_headphones.png", in: Bundle.module, compatibleWith: nil)
             speakerButton.setImage(image, for: .normal)
         } else {
             speakerButton(state: .off)
@@ -135,7 +135,7 @@ import UIKit
     func speakerButtonBluetoothState() {
         if let actionBarConfig = VoxeetUXKit.shared.conferenceController?.configuration.actionBar,
            actionBarConfig.overrideSpeakerOff == nil && actionBarConfig.overrideSpeakerOn == nil {
-            let image = UIImage(named: "SpeakerOnBluetooth", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            let image = UIImage(named: "icon_speaker_on_bluetooth.png", in: Bundle.module, compatibleWith: nil)
             speakerButton.setImage(image, for: .normal)
         } else {
             speakerButton(state: .off)
@@ -148,11 +148,11 @@ import UIKit
             customImage = state == .off ? actionBarConfig.overrideScreenShareOff : actionBarConfig.overrideScreenShareOn
         }
         
-        toggle(button: screenShareButton, state: state, defaultImageName: "ScreenShare", customImage: customImage)
+        toggle(button: screenShareButton, state: state, defaultImageName: "icon_screenshare", customImage: customImage)
     }
     
     private func toggle(button: UIButton, state: ButtonState, defaultImageName: String, customImage: UIImage?) {
-        let defaultImage = UIImage(named: defaultImageName + (state == .off ? "Off" : "On"), in: Bundle(for: type(of: self)), compatibleWith: nil)
+        let defaultImage = UIImage(named: defaultImageName + (state == .off ? "off.png" : "on.png"), in: Bundle.module, compatibleWith: nil)
         
         button.tag = state.rawValue
         button.setImage(customImage ?? defaultImage, for: .normal)
