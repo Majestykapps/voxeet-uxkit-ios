@@ -8,7 +8,9 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        .library(name: "VoxeetUXKit", targets: ["VoxeetUXKit"])
+        .library(
+            name: "VoxeetUXKit",
+            targets: ["VoxeetUXKit", "VoxeetSDK", "Kingfisher"])
     ],
     dependencies: [
       .package(
