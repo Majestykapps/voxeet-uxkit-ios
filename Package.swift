@@ -10,7 +10,7 @@ let package = Package(
     products: [
         .library(
             name: "VoxeetUXKit",
-            targets: ["VoxeetUXKit", "VoxeetSDK", "Kingfisher"])
+            targets: ["VoxeetUXKit"])
     ],
     dependencies: [
       .package(
@@ -29,8 +29,8 @@ let package = Package(
         .target(
             name: "VoxeetUXKit",
             dependencies: [
-                Target.Dependency.byName(name: "VoxeetSDK"),
-                Target.Dependency.byName(name: "Kingfisher")
+              .product(name:"VoxeetSDK", package: "VoxeetSDK"),
+              .product(name:"Kingfisher", package: "Kingfisher"),
             ],
             path: "VoxeetUXKit",
             exclude: ["Info.plist"],
